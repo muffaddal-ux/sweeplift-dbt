@@ -1,23 +1,46 @@
 version: 2
 
 sources:
-  - name: Schema  # Logical name for the source
-    database: Project ID  # BigQuery project ID
-    schema: Dataset  # BigQuery dataset
+  - name: LinkedIn_Ads # Logical name for the source
+    database: sweeplift  # BigQuery project ID
+    schema: LinkedIn_Ads  # BigQuery dataset
     tables:
-      - name: ad_insights # name you want to call it
-        identifier: ad_insights # name for the source table
-        description: "Contains data about ** source synced from Connector Name."
-      - name: account_analytics # name you want to call it
-        identifier: account_performance # name for the source table
-        description: "Contains data about ** source synced from Connector Name."
-  - name: Schema  # Logical name for the source
-    database: Project ID  # BigQuery project ID
-    schema: Dataset  # BigQuery dataset
+      - name: account_users # name you want to call it
+        identifier: account_users # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+      - name: accounts # name you want to call it
+        identifier: accounts # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+      - name: ad_campaign_analytics # name you want to call it
+        identifier: ad_campaign_analytics # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+      - name: ad_creative_analytics # name you want to call it
+        identifier: ad_creative_analytics # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+      - name: campaign_groups # name you want to call it
+        identifier: campaign_groups # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+      - name: campaigns # name you want to call it
+        identifier: campaigns # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+      - name: conversions # name you want to call it
+        identifier: conversions # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+      - name: creatives # name you want to call it
+        identifier: creatives # name for the source table
+        description: "Contains data about Linkedin source synced from AirByte."
+
+  - name: General_Table_US # Logical name for the source
+    database: sweeplift  # BigQuery project ID
+    schema: General_Table_US  # BigQuery dataset
     tables:
-      - name: campaigns
-        identifier: campaigns
-        description: "Contains data about ** source synced from Connector Name."
-      - name: campaign_analytics
-        identifier: ad_campaign_analytics
-        description: "Contains data about ** source synced from Connector Name."
+      - name: experiment_data # name you want to call it
+        identifier: experiment_data # name for the source table
+        description: "Contains data about GA4 source synced from AirByte."

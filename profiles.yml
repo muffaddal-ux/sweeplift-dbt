@@ -1,4 +1,4 @@
-dbt-sweeplift:
+dbt_sweeplift:
   target: dev
   outputs:
     dev:
